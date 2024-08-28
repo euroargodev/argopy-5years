@@ -1,4 +1,4 @@
-# Celebrating argopy 5 years anniversary 🎂
+# 🎂 Celebrating argopy 5 years anniversary 🎂
 
 Here find information about:
 - **argopy** challenges
