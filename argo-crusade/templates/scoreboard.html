@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Argo Crusade Scoreboard</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    table {
+      margin: 0 auto;
+      font-size: large;
+      border: 1px solid black;
+    }
+
+    h1 {
+      font-family: 'Press Start 2P';
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    td {
+      font-family: 'Press Start 2P';
+      background-color: #E4F5D4;
+      border: 1px solid black;
+    }
+
+    th,
+    td {
+      font-family: 'Press Start 2P';
+      font-weight: bold;
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    td {
+      font-weight: lighter;
+    }
+  </style>
+</head>
+<section>
+  <h1>Argo Crusade Scoreboard</h1>
+
+  <!-- TABLE CONSTRUCTION-->
+  <table id='table'>
+    <!-- HEADING FORMATION -->
+    <tr>
+      <th>Name</th>
+      <th>Score</th>
+    </tr>
+
+    <script>
+      $(document).ready(function () {
+
+        // FETCHING DATA FROM JSON FILE 
+        $.getJSON("{{ url_for('static', filename='scores.json')}}",
+          function (data) {
+            
+            data = data.sort(function(a, b){
+              return b.score - a.score;
+            });
+
+            var player = '';
+            
+            // ITERATING THROUGH OBJECTS 
+            $.each(data, function (key, value) {
+
+              //CONSTRUCTION OF ROWS HAVING 
+              // DATA FROM JSON OBJECT 
+              player += '<tr>';
+              player += '<td>' +
+                value.name + '</td>';
+
+              player += '<td>' +
+                value.score + '</td>';
+
+              player += '</tr>';
+            });
+
+            //INSERTING ROWS INTO TABLE  
+            $('#table').append(player);
+          });
+      }); 
+    </script>
+</section>
+</body>
+
+</html>
