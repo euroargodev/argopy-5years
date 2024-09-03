@@ -63,11 +63,14 @@
             var player = '';
             
             // ITERATING THROUGH OBJECTS 
+            var i=0;
             $.each(data, function (key, value) {
 
               //CONSTRUCTION OF ROWS HAVING 
               // DATA FROM JSON OBJECT 
+              if(i<10){
               player += '<tr>';
+              player += '<td>'+String(i+1)+'</td>';  
               player += '<td>' +
                 value.name + '</td>';
 
@@ -75,6 +78,9 @@
                 value.score + '</td>';
 
               player += '</tr>';
+              }
+              else {player += '';}
+              i += 1;              
             });
 
             //INSERTING ROWS INTO TABLE  
