@@ -17,7 +17,7 @@ from pygame import mixer
 ASSETS = Path("assets")
 display_width, display_height = 600, 800  # Should fit background image size
 
-game_speed = 1.5  # Adjust game play speed here
+game_speed = 0.5  # Adjust game play speed here
 num_of_enemies = 6
 
 if __name__ == "__main__":
