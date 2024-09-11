@@ -8,3 +8,5 @@ Possible challenges:
 - Determine the lowest pH ever recorded
 - Determine the highest chlorophyl concentration ever recorded
 - etc ...
+
+Each of the challenges should be used to highlight a climate change impact on the ocean 
