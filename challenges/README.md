@@ -1,4 +1,4 @@
-# argopy challenges
+# 🏆argopy challenges
 
 The idea is to propose coding challenges to the community, rewards are to be determined.
 
