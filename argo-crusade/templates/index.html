@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Argo Crusade</title>
+  <title>Argo Birthday Adventure</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <style>
     body {
-      background-color: #e2e8f0;
+      background-color: #7c93b3;
       padding: 1em;
       font-family: 'Press Start 2P';
       font-size: 1.2em;
@@ -19,11 +19,11 @@
       font-size: 12px;
     }
     #canvas-container {
-      width: 100%;
+      width: 100%;      
     }
     canvas {
       display: inline;
-      border-radius: 10px;
+      border-radius: 10px;      
     }
     .ninput {
       background-color: #ffffff;
@@ -41,6 +41,8 @@
   </style>
 </head>
 <body>
+  <!-- <h2>ARGOPY BIRTHDAY ADVENTURE</h2> -->
+  <img src="{{ url_for('static', filename='assets/g3.png')}}" height="150" style="margin-bottom: 20px">
   <div id="canvas-container">
     <canvas id="game" width="800" height="600"></canvas>
     <audio id="soundtrack" src="{{ url_for('static', filename='assets/soundtrack.mp3')}}" loop></audio>
