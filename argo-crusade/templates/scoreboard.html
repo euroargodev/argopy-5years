@@ -20,7 +20,7 @@
 
     td {
       font-family: 'Press Start 2P';
-      background-color: #E4F5D4;
+      background-color: #b4cad4;
       border: 1px solid black;
     }
 
@@ -39,16 +39,15 @@
   </style>
 </head>
 <section>
-  <h1>Argo Birthday Adventure Scoreboard</h1>
-
+  <h1>Scoreboard</h1>
+  <center><img src="{{ url_for('static', filename='assets/g2.png')}}" height="200" style="margin-bottom:10px;"></center>
   <!-- TABLE CONSTRUCTION-->
   <table id='table'>
     <!-- HEADING FORMATION -->
     <tr>
       <th>Name</th>
       <th>Score</th>
-    </tr>
-
+    </tr>    
     <script>
       $(document).ready(function () {
 
