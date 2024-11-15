@@ -9,30 +9,17 @@ Ocean warming
     :class-row: grid-item-row
 
     .. grid-item::
-        :columns: 2
+        :columns: 3
         :class: grid-item-webtitle
-        :outline:
-
-    .. grid-item::
-        :columns: 2
-        :class: grid-item-webtitle
-        :outline:
 
         .. image:: ../_static/argopy_logo_5years.png
            :height: 100
 
     .. grid-item::
-        :columns: 6
+        :columns: 9
         :class: grid-item-webtitle-small
-        :outline:
 
         Celebrating argopy 5 years anniversary !
-
-    .. grid-item::
-        :columns: 2
-        :class: grid-item-webtitle
-        :outline:
-
 
 .. grid:: 1
 
