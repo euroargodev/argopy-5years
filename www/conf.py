@@ -40,29 +40,13 @@ sys.path.insert(0, str(root))
 
 import argopy  # noqa: E402
 print("argopy: %s, %s" % (argopy.__version__, argopy.__file__))
-argopy.show_versions()
-argopy.show_options()
+# argopy.show_versions()
+# argopy.show_options()
 
 print("python exec:", sys.executable)
 print("sys.path:", sys.path)
 
 # -- General configuration ------------------------------------------------
-
-# If your documentation needs a minimal Sphinx version, state it here.
-#
-# needs_sphinx = '1.0'
-
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
-# extensions = ['sphinx.ext.autodoc',
-#     'sphinx.ext.doctest',
-#     'sphinx.ext.todo',
-#     'sphinx.ext.coverage',
-#     'sphinx.ext.mathjax',
-#     'sphinx.ext.ifconfig',
-#     'sphinx.ext.viewcode',
-#     'sphinx.ext.githubpages']
 
 ipython_warning_is_error = False
 
@@ -105,8 +89,6 @@ templates_path = ['_templates', sphinx_autosummary_accessors.templates_path]
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
-#
-# source_suffix = ['.rst', '.md']
 source_suffix = '.rst'
 
 # The master toctree document.
@@ -138,13 +120,7 @@ release = argopy.__version__
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_templates',
-                    '.ipynb_checkpoints', '_ext', 'tempo_out', '_src',
-                    'offline',
-                    'examples/.ipynb_checkpoints',
-                    'examples/ignore',
-                    'examples/*.ipynb',
-                    'examples/cache_bgc',
-                    'tryit.ipynb']
+                    '.ipynb_checkpoints', '_ext', '_src']
 
 # Give *lots* of time for notebook cell execution!
 # Note nbsphinx compiles *all* notebooks in docs unless excluded
@@ -192,34 +168,18 @@ numpydoc_show_class_members = False
 # unit titles (such as .. function::).
 add_module_names = False
 
-# extlinks = {
-#     'issue': ('https://github.com/euroargodev/argopy/issues/%s', 'GH#'),
-#     'commit': ('https://github.com/euroargodev/argopy/commit/%s', '@'),
-#     'pr': ('https://github.com/euroargodev/argopy/pull/%s', 'PR#'),
-# }
-
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-# html_theme = 'sphinx_rtd_theme'
 html_theme = 'sphinx_book_theme'
-# html_theme = 'bootstrap'  # pip install sphinx-bootstrap-theme
-# html_theme = 'sphinx_redactor_theme' # pip install sphinx-redactor-theme
-# html_theme = 'pydata_sphinx_theme'  # $ conda install pydata-sphinx-theme --channel conda-forge
-
-# Theme options are theme-specific and customize the look and feel of a theme
-# further.  For a list of options available for each theme, see the
-# documentation.
-#
-# html_theme_options = {}
 
 html_context = {
     "github_user": "euroargodev",
-    "github_repo": "argopy",
-    "github_version": "master",
-    "doc_path": "www",
+    "github_repo": "argopy-5years",
+    "github_version": "main",
+    "doc_path": "www/_build/html",
     "default_mode": "light",
 }
 
@@ -243,45 +203,19 @@ html_show_sourcelink = False
 
 # For sphinx_book_theme:
 html_theme_options = {
-    "repository_url": "https://www.github.com/euroargodev/argopy",
+    "repository_url": "https://www.github.com/euroargodev/argopy-5years",
     "collapse_navbar": False,
     "use_repository_button": False,
     "use_issues_button": False,
     "use_edit_page_button": False,
     "use_download_button": False,
-    "repository_branch": "master",
-    # "html_logo": "_static/argopy_logo_long.png",
+    "repository_branch": "main",
     "logo": {"image": html_logo,
              "alt_text": "argopy 5 years",
              },
-    # "display_version": True,
-    # "logo_only": True,
-    # "show_navbar_depth": 2,  # https://sphinx-book-theme.readthedocs.io/en/stable/customize/sidebar-primary.html?highlight=logo#control-the-depth-of-the-left-sidebar-lists-to-expand
-
     "show_nav_level": 2,  # https://pydata-sphinx-theme.readthedocs.io/en/latest/user_guide/navigation.html#control-how-many-navigation-levels-are-shown-by-default
     'collapse_navigation': False,  # https://pydata-sphinx-theme.readthedocs.io/en/latest/user_guide/navigation.html#remove-reveal-buttons-for-sidebar-items
-    # 'show_toc_level': 3,  # https://pydata-sphinx-theme.readthedocs.io/en/latest/user_guide/page-toc.html#show-more-levels-of-the-in-page-toc-by-default
-    # 'launch_buttons': { "thebe": True}
-    # "icon_links": [
-    #     {
-    #         "name": "Download Cheat sheet",
-    #         "url": "https://argopy.readthedocs.io/en/latest/_static/argopy-cheatsheet.pdf",
-    #         "icon": "fa-solid fa-file-pdf",
-    #         "type": "fontawesome",
-    #     },
-    #     {
-    #         "name": "Connect to Chat support",
-    #         "url": "https://gitter.im/Argo-floats/argopy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge",
-    #         "icon": "fa-solid fa-headset",
-    #         "type": "fontawesome",
-    #     },
-    #     {
-    #         "name": "Pre-registration for 2025 training-camps",
-    #         "url": "https://forms.gle/d8xPbrWu7aZcvMut9",
-    #         "icon": "fa-solid fa-graduation-cap",
-    #         "type": "fontawesome",
-    #     },
-    # ]
+    # "extra_footer": "<div>Hello world</div>",
 }
 
 # googleanalytics_id = 'G-C4MWDXYMXQ'
@@ -300,38 +234,9 @@ if not os.path.exists(ipython_savefig_dir):
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'argopydoc'
 
-
-# -- Options for LaTeX output ---------------------------------------------
-
-latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
-
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
-}
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'argopy.tex', u'argopy Documentation',
-     u'argopy Developers', 'manual'),
-]
-
 # -- Options for Github ---------------------------------------
 # GitHub repo
-issues_github_path = "euroargodev/argopy"
+issues_github_path = "euroargodev/argopy-5years"
 
 # -- Options for manual page output ---------------------------------------
 
@@ -344,7 +249,7 @@ man_pages = [
 
 # ---------------------------------------
 # configuration for sphinxext.opengraph
-ogp_site_url = "https://github.com/euroargodev/argopy"
+ogp_site_url = "https://github.com/euroargodev/argopy-5years"
 ogp_image = "https://raw.githubusercontent.com/euroargodev/argopy/master/docs/_static/argopy_logo_long.png"
 
 # -- Options for Texinfo output -------------------------------------------
