@@ -24,7 +24,7 @@ How to participe
 
         .. raw:: html
 
-            <h2 style="margin-top:-20px">Coding challenges<br>How to participate ?</h2>
+            <h2 style="margin-top:-20px">How to participate to coding challenges?</h2>
 
 
 .. admonition:: How to participate ?

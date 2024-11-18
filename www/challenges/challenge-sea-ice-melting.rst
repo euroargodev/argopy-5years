@@ -22,7 +22,6 @@ Sea-ice melting
 
         Celebrating argopy 5 years anniversary !
 
-
 .. grid:: 1
 
     .. grid-item-card:: Coding challenges > Sea-ice melting

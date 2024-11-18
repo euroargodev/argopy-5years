@@ -33,7 +33,7 @@ Global array milestone
 
         :bdg-info-line:`Context`
 
-        The global Argo array is made up of thousands of active floats for more than 20 years. Each float may have its own technology and sensors manufacturer. But the international Argo Data Management Team homogeneize and enforce strict file content and format conventions that are collectively decided. The Argo database is an example for many ocean observing systems.
+        The global Argo array is made up of thousands of floats. Each float may have its own technology and sensors manufacturer. But the international Argo Data Management Team homogenizes and enforces strict file content and format conventions that are collectively decided. The Argo database is an example for many ocean observing systems.
 
         :bdg-success-line:`Argo`
 
@@ -41,7 +41,7 @@ Global array milestone
 
         :bdg-danger-line:`Challenge`
 
-        Participants should propose a Python code to determine which float reported the 3.000.000th Argo profile of the dataset ?
+        Participants should propose a Python code to determine which float reported the 3.000.000th Argo profile of the dataset in 2024.
 
         +++
         .. grid:: 2
@@ -58,7 +58,7 @@ Global array milestone
 
             .. grid-item::
 
-                .. button-link:: ?
+                .. button-link:: https://argo.ucsd.edu/about/status/
                     :color: info
                     :expand:
 
