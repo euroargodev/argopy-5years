@@ -34,11 +34,12 @@ How to participe
 
 .. topic:: What's expected ?
 
-    - A python jupyter notebook providing answer to the challenge
-    - A documented script (provide information for code that would not be self-explanatory)
-    - That an **argopy** feature must be used at least once in the procedure
-    - That the computation be reproducible (e.g. avoid to use unpublished dataset, reference used data, etc...)
-    - That the computation could be ran on a laptop
+    A python jupyter notebook providing answer to the challenge and that:
+
+    - is documented (provide information for parts that would not be self-explanatory),
+    - uses at least once in the procedure an **argopy** feature,
+    - provides a reproducible computation (e.g. avoid to use unpublished dataset, reference used data, etc...),
+    - provides a computation executable on a laptop.
 
 .. hint::
 
