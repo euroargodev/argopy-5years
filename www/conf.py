@@ -216,10 +216,8 @@ html_theme_options = {
     "show_nav_level": 2,  # https://pydata-sphinx-theme.readthedocs.io/en/latest/user_guide/navigation.html#control-how-many-navigation-levels-are-shown-by-default
     'collapse_navigation': False,  # https://pydata-sphinx-theme.readthedocs.io/en/latest/user_guide/navigation.html#remove-reveal-buttons-for-sidebar-items
     # "extra_footer": "<div>Hello world</div>",
+    "analytics": {"google_analytics_id": "G-QEB25K3YYV", "googleanalytics_enabled": True},
 }
-
-# googleanalytics_id = 'G-C4MWDXYMXQ'
-# googleanalytics_enabled = True
 
 # Sometimes the savefig directory doesn't exist and needs to be created
 # https://github.com/ipython/ipython/issues/8733
