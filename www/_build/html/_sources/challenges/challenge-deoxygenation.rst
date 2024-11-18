@@ -48,10 +48,11 @@ Ocean Deoxygenation
 
             .. grid-item::
 
-                .. button-link:: ?
+                .. button-ref:: howto
                     :color: danger
                     :expand:
                     :shadow:
+                    :ref-type: ref
 
                     Submit your code
 
