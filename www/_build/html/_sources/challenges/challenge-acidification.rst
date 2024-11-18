@@ -13,7 +13,8 @@ Ocean acidification
         :class: grid-item-webtitle
 
         .. image:: ../_static/argopy_logo_5years.png
-           :height: 100
+            :height: 100
+            :target: https://euroargodev.github.io/argopy-5years
 
     .. grid-item::
         :columns: 9

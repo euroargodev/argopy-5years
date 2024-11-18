@@ -13,7 +13,8 @@ How to participe
         :class: grid-item-webtitle
 
         .. image:: ../_static/argopy_logo_5years.png
-           :height: 200
+            :height: 200
+            :target: https://euroargodev.github.io/argopy-5years
 
     .. grid-item::
         :columns: 7
@@ -43,7 +44,7 @@ How to participe
 
 .. hint::
 
-    Responses will be evaluated by the argopy development team along the following criteria:
+    Responses will be evaluated by the argopy team along the following criteria:
 
     - Documentation quality
     - Script readability
