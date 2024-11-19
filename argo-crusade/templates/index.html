@@ -334,6 +334,10 @@ function gameLoop() {
 
 function publish_score() {
   var username = document.getElementById('username').value;
+  if((username=="Name")||username.length<2){
+    alert("Change your Name so we can congratulate you !!");
+    return;
+  }
   var score = localStorage.getItem('gameScore');
 
   var requeststr = 'username=' + username + '&score=' + score.toString()  
