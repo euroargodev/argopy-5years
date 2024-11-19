@@ -11,22 +11,27 @@ Celebrating argopy 5 years anniversary !
     challenges/index
 
 
-.. grid:: 1 2 2 2
+.. grid:: 1 1 2 2
     :class-row: grid-item-row
 
     .. grid-item::
-        :columns: 5
+        :columns: 2
         :class: grid-item-webtitle
 
         .. image:: _static/argopy_logo_5years.png
-            :height: 200
             :target: https://euroargodev.github.io/argopy-5years
 
     .. grid-item::
-        :columns: 7
+        :columns: 10
         :class: grid-item-webtitle
 
-        Celebrating argopy 5 years anniversary !
+        .. image:: https://argopy.readthedocs.io/en/latest/_static/argopy_logo_long.png
+            :height: 75
+            :target: https://argopy.readthedocs.io
+
+        .. raw:: html
+
+            <div>Celebrating <span class="txt-argo argopy-Ultra">argo</span><span class="txt-py argopy-Ultra">py</span> 5 years anniversary !</div>
 
 
 .. grid:: 1 2 4 4

@@ -5,26 +5,25 @@
 How to participe
 ----------------
 
-.. grid:: 1 2 2 2
+.. grid:: 1
     :class-row: grid-item-row
 
     .. grid-item::
-        :columns: 5
+        :columns: 2
         :class: grid-item-webtitle
 
         .. image:: ../_static/argopy_logo_5years.png
-            :height: 200
             :target: https://euroargodev.github.io/argopy-5years
 
     .. grid-item::
-        :columns: 7
+        :columns: 10
         :class: grid-item-webtitle
 
-        Celebrating argopy 5 years anniversary !
+        .. image:: https://argopy.readthedocs.io/en/latest/_static/argopy_logo_long.png
+            :height: 75
+            :target: https://argopy.readthedocs.io
 
-        .. raw:: html
-
-            <h2 style="margin-top:-20px">How to participate to coding challenges?</h2>
+        How to participate to the coding challenge ?
 
 
 .. admonition:: How to participate ?
@@ -37,10 +36,9 @@ How to participe
 
     A python jupyter notebook providing answer to the challenge and that:
 
-    - is documented (provide information for parts that would not be self-explanatory),
-    - uses at least once in the procedure an **argopy** feature,
-    - provides a reproducible computation (e.g. avoid to use unpublished dataset, reference used data, etc...),
-    - provides a computation executable on a laptop.
+    - is `documented <https://blog.codacy.com/code-documentation#CodeDocumentationBestPractices>`_ (provide information for parts of the code that would not be self-explanatory),
+    - uses at least once in the procedure an `argopy feature <https://argopy.readthedocs.io/en/latest/api.html>`_,
+    - provides a `reproducible computation <https://en.wikipedia.org/wiki/Reproducibility>`_ (e.g. avoid to use unpublished dataset,  use referenced data, etc...).
 
 .. hint::
 

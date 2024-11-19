@@ -5,30 +5,33 @@
 Global array milestone
 ----------------------
 
-.. grid:: 1 2 2 2
+.. grid:: 1
     :class-row: grid-item-row
 
     .. grid-item::
-        :columns: 3
+        :columns: 2
         :class: grid-item-webtitle
 
         .. image:: ../_static/argopy_logo_5years.png
-            :height: 100
             :target: https://euroargodev.github.io/argopy-5years
 
     .. grid-item::
-        :columns: 9
-        :class: grid-item-webtitle-small
+        :columns: 10
+        :class: grid-item-webtitle
 
-        Celebrating argopy 5 years anniversary !
+        .. image:: https://argopy.readthedocs.io/en/latest/_static/argopy_logo_long.png
+            :height: 75
+            :target: https://argopy.readthedocs.io
+
+        Coding challenges: Network milestone
 
 .. grid:: 1
 
-    .. grid-item-card:: Coding challenges > Network milestone
-        :img-background: ../_static/bg_data.png
+    .. grid-item-card::
         :img-top: ../_static/icon_data.svg
         :class-img-top: challenge-img-top
-        :class-footer: challenge-footer
+        :img-bottom: ../_static/bg_data.png
+        :class-footer: challenge-card-footer
         :class-card: challenge-card-large
 
         :bdg-info-line:`Context`
@@ -58,8 +61,8 @@ Global array milestone
 
             .. grid-item::
 
-                .. button-link:: https://argo.ucsd.edu/about/status/
+                .. button-link:: https://argo.ucsd.edu/about/status
                     :color: info
                     :expand:
 
-                    Learn more
+                    Learn more on the Argo netwrok status
