@@ -15,14 +15,15 @@ Celebrating argopy 5 years anniversary !
     :class-row: grid-item-row
 
     .. grid-item::
-        :columns: 6
+        :columns: 5
         :class: grid-item-webtitle
 
         .. image:: _static/argopy_logo_5years.png
-           :width: 200
+            :height: 200
+            :target: https://euroargodev.github.io/argopy-5years
 
     .. grid-item::
-        :columns: 6
+        :columns: 7
         :class: grid-item-webtitle
 
         Celebrating argopy 5 years anniversary !

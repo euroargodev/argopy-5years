@@ -13,7 +13,8 @@ Ocean warming
         :class: grid-item-webtitle
 
         .. image:: ../_static/argopy_logo_5years.png
-           :height: 100
+            :height: 100
+            :target: https://euroargodev.github.io/argopy-5years
 
     .. grid-item::
         :columns: 9
@@ -47,10 +48,11 @@ Ocean warming
 
             .. grid-item::
 
-                .. button-link:: ?
+                .. button-ref:: howto
                     :color: danger
                     :expand:
                     :shadow:
+                    :ref-type: ref
 
                     Submit your code
 

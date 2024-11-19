@@ -8,35 +8,37 @@ Coding challenges
 .. toctree::
     :maxdepth: 2
     :hidden:
-    :caption: List of challenges
 
     challenge-warming
     challenge-sea-ice-melting
     challenge-deoxygenation
     challenge-acidification
     challenge-profile
+    howto
 
 .. grid:: 1 2 2 2
     :class-row: grid-item-row
 
     .. grid-item::
-        :columns: 4
+        :columns: 5
         :class: grid-item-webtitle
 
         .. image:: ../_static/argopy_logo_5years.png
-           :width: 200
+            :height: 200
+            :target: https://euroargodev.github.io/argopy-5years
 
     .. grid-item::
-        :columns: 8
+        :columns: 7
         :class: grid-item-webtitle
 
         Celebrating argopy 5 years anniversary !
 
         .. raw:: html
 
-            <h2>Coding challenges</h2>
+            <h2 style="margin-top:-20px">Coding challenges</h2>
 
-            <small>Proposed challenges are designed to improve your argopy programming skills and to learn more on its features. See all details to participate at the bottom of this page.</small>
+            <small>Proposed challenges are designed to improve your argopy programming skills and to learn more on its features.</small>
+
 ..
     Grid values:
     - default nb of columns for: extra-small (<576px), small (768px), medium (992px) and large screens (>1200px)
@@ -95,8 +97,3 @@ Coding challenges
             :link-type: ref
 
             ^^^
-
-.. topic:: Contest details
-
-    The deadline to submit you response to a challenge is January 31st, midnight (CET).
-

@@ -13,14 +13,14 @@ Sea-ice melting
         :class: grid-item-webtitle
 
         .. image:: ../_static/argopy_logo_5years.png
-           :height: 100
+            :height: 100
+            :target: https://euroargodev.github.io/argopy-5years
 
     .. grid-item::
         :columns: 9
         :class: grid-item-webtitle-small
 
         Celebrating argopy 5 years anniversary !
-
 
 .. grid:: 1
 
@@ -48,10 +48,11 @@ Sea-ice melting
 
             .. grid-item::
 
-                .. button-link:: ?
+                .. button-ref:: howto
                     :color: danger
                     :expand:
                     :shadow:
+                    :ref-type: ref
 
                     Submit your code
 
