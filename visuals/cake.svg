@@ -23,13 +23,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.90632021"
-     inkscape:cx="381.21185"
-     inkscape:cy="552.23308"
-     inkscape:window-width="1873"
-     inkscape:window-height="1025"
-     inkscape:window-x="47"
-     inkscape:window-y="27"
+     inkscape:zoom="0.45316011"
+     inkscape:cx="500.92671"
+     inkscape:cy="503.13343"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -1513,7 +1513,10 @@
     </g>
     <g
        id="g2"
-       transform="matrix(0.37876705,0,0,0.37876705,56.891159,125.78247)">
+       transform="matrix(0.37876705,0,0,0.37876705,56.891159,125.78247)"
+       inkscape:export-filename="g2.png"
+       inkscape:export-xdpi="149"
+       inkscape:export-ydpi="149">
       <text
          xml:space="preserve"
          transform="scale(0.26458333)"
@@ -1521,19 +1524,19 @@
          style="font-style:normal;font-weight:normal;font-size:192px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1);fill:#04709d;fill-opacity:1;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><tspan
            x="238.84961"
            y="462.17578"
-           id="tspan2"><tspan
-             style="font-weight:bold;font-family:Keraleeyam;-inkscape-font-specification:'Keraleeyam Bold'"
+           id="tspan3"><tspan
+             style="font-family:Collegiate;-inkscape-font-specification:Collegiate"
              id="tspan1">argo</tspan></tspan></text>
       <text
          xml:space="preserve"
-         transform="matrix(0.26458333,0,0,0.26458333,-23.509074,14.233321)"
+         transform="matrix(0.26458333,0,0,0.26458333,-24.906151,14.233321)"
          id="text2"
          style="font-style:normal;font-weight:normal;font-size:192px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2);fill:#ffd243;fill-opacity:1;stroke:#04709d;stroke-width:4.0252;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"><tspan
            x="627.11914"
            y="408.26758"
-           id="tspan4"><tspan
-             style="font-weight:bold;font-family:Keraleeyam;-inkscape-font-specification:'Keraleeyam Bold'"
-             id="tspan3">py</tspan></tspan></text>
+           id="tspan6"><tspan
+             style="font-family:Collegiate;-inkscape-font-specification:Collegiate"
+             id="tspan5">py</tspan></tspan></text>
     </g>
   </g>
 </svg>
