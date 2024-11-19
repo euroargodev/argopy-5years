@@ -43,7 +43,7 @@ body {
     color: #FFFFFF
 }
 .sd-card-title{
-    font-family: GothamUltra;
+    font-family: GothamMedium;
     text-align: center;
 }
 .challenge-card-large .sd-card-title{
@@ -71,23 +71,32 @@ body {
 
 @font-face {
   font-family: GothamUltra;
-  src: url(../_static/Gotham-font-family/Gotham/Gotham-Ultra.otf);
+  src: url(../_static/fonts/Gotham/Gotham-Ultra.otf);
+}
+
+@font-face {
+  font-family: GothamLight;
+  src: url(../_static/fonts/Gotham/Gotham-Light.otf);
+}
+@font-face {
+  font-family: GothamMedium;
+  src: url(../_static/fonts/Gotham/Gotham-Medium.otf);
 }
 
 .grid-item-webtitle{
-    font-size: 42px;
+    font-size: xxx-large;
     font-weight: bold;
     text-align: center;
     vertical-align: middle;
-    font-family: GothamUltra;
+    font-family: GothamMedium;
 }
 
 .grid-item-webtitle-small{
-    font-size: 32px;
+    font-size: large;
     font-weight: bold;
     text-align: center;
     vertical-align: middle;
-    font-family: GothamUltra;
+    font-family: GothamMedium;
 }
 
 .grid-item-row{
@@ -95,3 +104,19 @@ body {
 }
 
 section.hide-me > h1 {display: none;}
+
+span.txt-argo{
+    color: rgb(14, 92, 140);
+    font-family: GothamUltra;
+}
+span.txt-py{
+    color: rgb(254, 203, 52);
+    font-family: GothamUltra;
+}
+
+span.argopy-Ultra{
+    font-family: GothamUltra;
+}
+span.argopy-Medium{
+    font-family: GothamMedium;
+}

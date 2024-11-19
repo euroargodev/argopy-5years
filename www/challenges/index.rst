@@ -16,7 +16,7 @@ Coding challenges
     challenge-profile
     howto
 
-.. grid:: 1 2 2 2
+.. grid:: 1 1 2 2
     :class-row: grid-item-row
 
     .. grid-item::
@@ -27,24 +27,27 @@ Coding challenges
             :height: 200
             :target: https://euroargodev.github.io/argopy-5years
 
+
     .. grid-item::
         :columns: 7
         :class: grid-item-webtitle
 
-        Celebrating argopy 5 years anniversary !
+        .. image:: https://argopy.readthedocs.io/en/latest/_static/argopy_logo_long.png
+            :height: 75
+            :target: https://argopy.readthedocs.io
 
         .. raw:: html
 
-            <h2 style="margin-top:-20px">Coding challenges</h2>
+            <div>Coding challenges</div>
 
-            <small>Proposed challenges are designed to improve your argopy programming skills and to learn more on its features.</small>
+            <small>Proposed challenges are designed to improve your <span class="txt-argo argopy-Medium">argo</span><span class="txt-py argopy-Medium">py</span> programming skills and to learn more on its features.</small>
 
 ..
     Grid values:
     - default nb of columns for: extra-small (<576px), small (768px), medium (992px) and large screens (>1200px)
     - or use a single value to apply for all screens
 
-.. grid:: 2 3 4 5
+.. grid:: 1 2 4 5
     :class-container: challenge-card-grid
     :padding: 1
     :margin: 3

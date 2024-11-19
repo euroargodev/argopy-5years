@@ -11,7 +11,7 @@ Celebrating argopy 5 years anniversary !
     challenges/index
 
 
-.. grid:: 1 2 2 2
+.. grid:: 1 1 2 2
     :class-row: grid-item-row
 
     .. grid-item::
@@ -26,7 +26,9 @@ Celebrating argopy 5 years anniversary !
         :columns: 7
         :class: grid-item-webtitle
 
-        Celebrating argopy 5 years anniversary !
+        .. raw:: html
+
+            <div>Celebrating <span class="txt-argo argopy-Ultra">argo</span><span class="txt-py argopy-Ultra">py</span> 5 years anniversary !</div>
 
 
 .. grid:: 1 2 4 4
