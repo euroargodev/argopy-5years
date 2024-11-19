@@ -5,30 +5,32 @@
 Credits
 -------
 
-.. grid:: 1 2 2 2
+.. grid:: 1 1 2 2
     :class-row: grid-item-row
 
     .. grid-item::
-        :columns: 5
+        :columns: 2
         :class: grid-item-webtitle
 
         .. image:: _static/argopy_logo_5years.png
-            :height: 200
             :target: https://euroargodev.github.io/argopy-5years
 
+
     .. grid-item::
-        :columns: 7
+        :columns: 10
         :class: grid-item-webtitle
 
-        Celebrating argopy 5 years anniversary !
+        .. image:: https://argopy.readthedocs.io/en/latest/_static/argopy_logo_long.png
+            :height: 75
+            :target: https://argopy.readthedocs.io
 
         .. raw:: html
 
-            <h2 style="margin-top:-20px">Credits</h2>
+            <div>Credits</div>
 
 .. topic:: Vectors for anniversary items on the landing page
 
-    All original vectors have been modified by K. Balem to fit our color scheme
+    All original vectors have been modified by `Kevin Balem <https://github.com/quai20>`_ to fit our color scheme
 
     - Coding challenge: Designed by `vectorjuice / Freepik <http://www.freepik.com>`_
     - Online game contest: Designed by `storyset / Freepik <http://www.freepik.com>`_

@@ -20,16 +20,15 @@ Coding challenges
     :class-row: grid-item-row
 
     .. grid-item::
-        :columns: 5
+        :columns: 2
         :class: grid-item-webtitle
 
         .. image:: ../_static/argopy_logo_5years.png
-            :height: 200
             :target: https://euroargodev.github.io/argopy-5years
 
 
     .. grid-item::
-        :columns: 7
+        :columns: 10
         :class: grid-item-webtitle
 
         .. image:: https://argopy.readthedocs.io/en/latest/_static/argopy_logo_long.png

@@ -5,30 +5,33 @@
 Sea-ice melting
 ---------------
 
-.. grid:: 1 2 2 2
+.. grid:: 1
     :class-row: grid-item-row
 
     .. grid-item::
-        :columns: 3
+        :columns: 2
         :class: grid-item-webtitle
 
         .. image:: ../_static/argopy_logo_5years.png
-            :height: 100
             :target: https://euroargodev.github.io/argopy-5years
 
     .. grid-item::
-        :columns: 9
-        :class: grid-item-webtitle-small
+        :columns: 10
+        :class: grid-item-webtitle
 
-        Celebrating argopy 5 years anniversary !
+        .. image:: https://argopy.readthedocs.io/en/latest/_static/argopy_logo_long.png
+            :height: 75
+            :target: https://argopy.readthedocs.io
+
+        Coding challenges: Sea-ice melting
 
 .. grid:: 1
 
-    .. grid-item-card:: Coding challenges > Sea-ice melting
-        :img-background: ../_static/bg_melting.png
+    .. grid-item-card::
         :img-top: ../_static/icon_melting.svg
         :class-img-top: challenge-img-top
-        :class-footer: challenge-footer
+        :img-bottom: ../_static/bg_melting.png
+        :class-footer: challenge-card-footer
         :class-card: challenge-card-large
 
         :bdg-info-line:`Scientific Context`
@@ -41,7 +44,7 @@ Sea-ice melting
 
         :bdg-danger-line:`Challenge`
 
-        Participants should propose a Python code to determine which Argo float stayed trapped under sea ice for the longest period before sending data correct data.
+        Participants should propose a Python code to determine which Argo float stayed trapped under sea ice for the longest period before sending correct data.
 
         +++
         .. grid:: 2

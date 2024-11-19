@@ -5,30 +5,33 @@
 Ocean warming
 -------------
 
-.. grid:: 2 2 2 2
+.. grid:: 1
     :class-row: grid-item-row
 
     .. grid-item::
-        :columns: 3
+        :columns: 2
         :class: grid-item-webtitle
 
         .. image:: ../_static/argopy_logo_5years.png
-            :height: 100
             :target: https://euroargodev.github.io/argopy-5years
 
     .. grid-item::
-        :columns: 9
-        :class: grid-item-webtitle-small
+        :columns: 10
+        :class: grid-item-webtitle
 
-        Celebrating argopy 5 years anniversary !
+        .. image:: https://argopy.readthedocs.io/en/latest/_static/argopy_logo_long.png
+            :height: 75
+            :target: https://argopy.readthedocs.io
+
+        Coding challenges: Ocean warming
 
 .. grid:: 1
 
-    .. grid-item-card:: Coding challenges > Ocean warming
-        :img-background: ../_static/bg_warming.png
+    .. grid-item-card::
         :img-top: ../_static/icon_warming.svg
         :class-img-top: challenge-img-top
-        :class-footer: challenge-footer
+        :img-bottom: ../_static/bg_warming.png
+        :class-footer: challenge-card-footer
         :class-card: challenge-card-large
 
         :bdg-info-line:`Scientific context`
@@ -41,7 +44,7 @@ Ocean warming
 
         :bdg-danger-line:`Challenge`
 
-        Participants should submit a Python code to determine the highest valid ocean temperature ever recorded with an Argo float between 3000 and 4000db.
+        Participants should submit a Python code to determine the highest valid ocean temperature ever recorded with an Argo float between 3 000 and 4 000 db.
 
         +++
         .. grid:: 2
