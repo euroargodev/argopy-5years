@@ -23,7 +23,10 @@ Sea-ice melting
             :height: 75
             :target: https://argopy.readthedocs.io
 
-        Coding challenges: Sea-ice melting
+        .. raw:: html
+
+            <div class="title">Coding challenge: Sea-ice melting</div>
+            <small><a href="index.html">Back to the list of challenges</a></small>
 
 .. grid:: 1
 

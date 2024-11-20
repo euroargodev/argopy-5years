@@ -37,9 +37,9 @@ Coding challenges
 
         .. raw:: html
 
-            <div>Coding challenges</div>
+            <div class="title">Coding challenges</div>
 
-            <small>Proposed challenges are designed to improve your <span class="txt-argo argopy-Medium">argo</span><span class="txt-py argopy-Medium">py</span> programming skills and to learn more on its features.</small>
+            <small>Proposed challenges are designed to improve your <span class="txt-argo argopy-Medium">argo</span><span class="txt-py argopy-Medium">py</span> programming skills and to learn more on its features.<br><a href="howto.html">Check here for how to participate</a></small>
 
 ..
     Grid values:

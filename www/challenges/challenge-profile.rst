@@ -23,7 +23,10 @@ Global array milestone
             :height: 75
             :target: https://argopy.readthedocs.io
 
-        Coding challenges: Network milestone
+        .. raw:: html
+
+            <div class="title">Coding challenge: Network milestone</div>
+            <small><a href="index.html">Back to the list of challenges</a></small>
 
 .. grid:: 1
 
@@ -65,4 +68,4 @@ Global array milestone
                     :color: info
                     :expand:
 
-                    Learn more on the Argo netwrok status
+                    More on the Argo network status

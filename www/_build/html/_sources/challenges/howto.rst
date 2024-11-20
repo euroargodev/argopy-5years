@@ -23,7 +23,11 @@ How to participe
             :height: 75
             :target: https://argopy.readthedocs.io
 
-        How to participate to the coding challenge ?
+        .. raw:: html
+
+            <div class="title">How to participate to the coding challenge ?</div>
+
+            <small><a href="index.html">Check here for the list of challenges</a></small>
 
 
 .. admonition:: How to participate ?
@@ -48,4 +52,4 @@ How to participe
     - Script readability
     - Amount of data downloaded (the smaller the better)
 
-    The most *elegant* responses will be added to the `argopy documentation gallery <https://argopy.readthedocs.io/en/latest/gallery.html>`_.
+    The most *elegant* responses will be added to the `argopy documentation gallery <https://argopy.readthedocs.io/en/latest/gallery.html>`_ and winners will received a special prize.
