@@ -23,7 +23,10 @@ Ocean Deoxygenation
             :height: 75
             :target: https://argopy.readthedocs.io
 
-        Coding challenges: Ocean deoxygenation
+        .. raw:: html
+
+            <div class="title">Coding challenge: Ocean deoxygenation</div>
+            <small><a href="index.html">Back to the list of challenges</a></small>
 
 .. grid:: 1
 

@@ -23,7 +23,10 @@ Ocean warming
             :height: 75
             :target: https://argopy.readthedocs.io
 
-        Coding challenges: Ocean warming
+        .. raw:: html
+
+            <div class="title">Coding challenge: Ocean warming</div>
+            <small><a href="index.html">Back to the list of challenges</a></small>
 
 .. grid:: 1
 

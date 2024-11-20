@@ -31,7 +31,7 @@ Celebrating argopy 5 years anniversary !
 
         .. raw:: html
 
-            <div>Celebrating <span class="txt-argo argopy-Ultra">argo</span><span class="txt-py argopy-Ultra">py</span> 5 years anniversary !</div>
+            <div class='title'>Celebrating <span class="txt-argo argopy-Medium">argo</span><span class="txt-py argopy-Medium">py</span> 5 years anniversary !</div>
 
 
 .. grid:: 1 2 4 4
