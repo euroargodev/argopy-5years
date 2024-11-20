@@ -32,8 +32,8 @@ Ocean warming
 
     .. grid-item-card::
         :img-top: ../_static/icon_warming.svg
-        :class-img-top: challenge-img-top
         :img-bottom: ../_static/bg_warming.png
+        :class-img-top: challenge-img-top
         :class-footer: challenge-card-footer
         :class-card: challenge-card-large
 

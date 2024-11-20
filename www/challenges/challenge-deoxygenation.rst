@@ -32,8 +32,8 @@ Ocean Deoxygenation
 
     .. grid-item-card::
         :img-top: ../_static/icon_deox.svg
-        :class-img-top: challenge-img-top
         :img-bottom: ../_static/bg_deox.png
+        :class-img-top: challenge-img-top
         :class-footer: challenge-card-footer
         :class-card: challenge-card-large
 

@@ -32,8 +32,8 @@ Sea-ice melting
 
     .. grid-item-card::
         :img-top: ../_static/icon_melting.svg
-        :class-img-top: challenge-img-top
         :img-bottom: ../_static/bg_melting.png
+        :class-img-top: challenge-img-top
         :class-footer: challenge-card-footer
         :class-card: challenge-card-large
 

@@ -40,23 +40,27 @@ Celebrating argopy 5 years anniversary !
         :img-top: _static/landing_coding.svg
         :link: coding-challenges
         :link-type: ref
+        :class-card: activity-card
 
         ^^^
 
     .. grid-item-card:: Online game contest
         :img-top: _static/landing_game.svg
         :link: https://argopy.pythonanywhere.com
+        :class-card: activity-card
 
         ^^^
 
     .. grid-item-card:: Fill on our User survey
         :img-top: _static/landing_survey.svg
         :link: https://forms.gle/v8NnXkXCEYwRfePp8
+        :class-card: activity-card
 
         ^^^
 
     .. grid-item-card:: 2025 Training camp registration
         :img-top: _static/landing_training.svg
         :link: https://forms.gle/d8xPbrWu7aZcvMut9
+        :class-card: activity-card
 
         ^^^
