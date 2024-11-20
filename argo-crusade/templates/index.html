@@ -28,15 +28,15 @@
     }
     .ninput {
       background-color: #ffffff;
-      padding: .5em;
+      padding: .3em;
       font-family: 'Press Start 2P';
       font-size: 1.0em;
       text-align: center;
     }
     .button {
-      padding: .5em;
+      padding: .3em;
       font-family: 'Press Start 2P';
-      font-size: 1.0em;
+      font-size: 0.8em;
       text-align: center;
     }
   </style>
@@ -44,7 +44,8 @@
 <body>
   <!-- <h2>ARGOPY BIRTHDAY ADVENTURE</h2> -->
   <a  href="https://euroargodev.github.io/argopy-5years"><img src="{{ url_for('static', filename='assets/g3.png')}}" height="130" style="margin-bottom: 10px; margin-top: 0px;"></a>
-  <div id="canvas-container">
+  <br>
+  <div id="canvas-container">    
     <canvas id="game" width="800" height="600"></canvas>
     <audio id="soundtrack" src="{{ url_for('static', filename='assets/soundtrack.mp3')}}" loop></audio>
     <audio id="shoot" src="{{ url_for('static', filename='assets/laser.wav')}}"></audio>
@@ -52,11 +53,15 @@
     <audio id="achievement" src="{{ url_for('static', filename='assets/achievement.wav')}}"></audio>
   </div>
   <p>◀️ ▶️ ARROWS 🔫 SPACE 🔈 S</p>  
-  <br>
+  <hr style="height:-5px; visibility:hidden;" />
   <input class="ninput" type="text" id="username" name="username" value="Name" required minlength="3" maxlength="12" size="10" />  
-  <input class="button" type="button" value="Publish your score" onclick="publish_score()"/>
-  <div id="conf_message"></div>
+  <input class="button" type="button" value="Publish score" onclick="publish_score()"/>
+  <input class="button" type="button" value="View scores" onclick="view_scores()"/>
+  <hr style="height:-5px; visibility:hidden;" />
 
+  <a style="font-size:small;">The contest will end on January 31st.</a><br>
+  <a style="font-size:small;">Try to be in the top3 to perhaps win a cool argopy price.</a>
+  <br>
   <script>
     const Game = {
   canvas: null,
@@ -332,6 +337,10 @@ function gameLoop() {
   if (!Game.gameOver) requestAnimationFrame(gameLoop)
 }
 
+function view_scores(){
+  window.open('scoreboard',"_blank");
+}
+
 function publish_score() {
   var username = document.getElementById('username').value;
   if((username=="Name")||username.length<2){
@@ -339,6 +348,10 @@ function publish_score() {
     return;
   }
   var score = localStorage.getItem('gameScore');
+  if(score==null){
+    alert("No score to save.");
+    return;
+  }
 
   var requeststr = 'username=' + username + '&score=' + score.toString()  
   //FLASK REQUEST
