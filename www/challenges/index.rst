@@ -9,11 +9,11 @@ Coding challenges
     :maxdepth: 2
     :hidden:
 
-    challenge-warming
-    challenge-sea-ice-melting
-    challenge-deoxygenation
     challenge-acidification
+    challenge-sea-ice-melting
     challenge-profile
+    challenge-warming
+    challenge-deoxygenation
     howto
 
 .. grid:: 1 1 2 2
@@ -53,9 +53,9 @@ Coding challenges
 
     .. grid-item::
 
-        .. card:: Ocean warming
-            :img-top: ../_static/icon_warming.svg
-            :link: challenge-warming
+        .. card:: Acidification
+            :img-top: ../_static/icon_acid.svg
+            :link: challenge-acidification
             :link-type: ref
             :class-card: challenge-card
 
@@ -73,29 +73,29 @@ Coding challenges
 
     .. grid-item::
 
-        .. card:: Deoxygenation
-            :img-top: ../_static/icon_deox.svg
-            :link: challenge-deoxygenation
-            :link-type: ref
-            :class-card: challenge-card
-
-            ^^^
-
-    .. grid-item::
-
-        .. card:: Acidification
-            :img-top: ../_static/icon_acid.svg
-            :link: challenge-acidification
-            :link-type: ref
-            :class-card: challenge-card
-
-            ^^^
-
-    .. grid-item::
-
         .. card:: Network milestone
             :img-top: ../_static/icon_data.svg
             :link: challenge-profile
+            :link-type: ref
+            :class-card: challenge-card
+
+            ^^^
+
+    .. grid-item::
+
+        .. card:: Ocean warming
+            :img-top: ../_static/icon_warming.svg
+            :link: challenge-warming
+            :link-type: ref
+            :class-card: challenge-card
+
+            ^^^
+
+    .. grid-item::
+
+        .. card:: Deoxygenation
+            :img-top: ../_static/icon_deox.svg
+            :link: challenge-deoxygenation
             :link-type: ref
             :class-card: challenge-card
 
