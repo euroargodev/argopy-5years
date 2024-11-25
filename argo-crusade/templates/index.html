@@ -311,12 +311,12 @@ function render() {
     Game.ctx.font = `60px '${Game.font}'`
     Game.ctx.fillText("GAME OVER", 130, 300)
     Game.ctx.font = `20px '${Game.font}'`
-    Game.ctx.fillText("Press R to restart", 220, 340)
+    Game.ctx.fillText("Press Enter to restart", 220, 340)
 
     if (Game.score > maxScore) localStorage.setItem("gameScore", Game.score)
 
     document.addEventListener("keyup", (event) => {
-      if (event.key === "r") location.reload()
+      if (event.key === "Enter") location.reload()
     })
   }
 }
@@ -361,7 +361,7 @@ function publish_score() {
       data: requeststr,
       contentType: 'application/json;charset=UTF-8',      
       success: function (response) {
-        document.getElementById('conf_message').innerHTML = response;        
+        //document.getElementById('conf_message').innerHTML = response;        
         window.open('scoreboard',"_blank");
       },
       async: false
