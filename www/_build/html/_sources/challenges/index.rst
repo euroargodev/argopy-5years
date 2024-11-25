@@ -58,8 +58,6 @@ Coding challenges
             :link: challenge-warming
             :link-type: ref
             :class-card: challenge-card
-            :class-footer: challenge-card-footer
-            :class-header: challenge-card-header
 
             ^^^
 
@@ -79,6 +77,7 @@ Coding challenges
             :img-top: ../_static/icon_deox.svg
             :link: challenge-deoxygenation
             :link-type: ref
+            :class-card: challenge-card
 
             ^^^
 
@@ -88,6 +87,7 @@ Coding challenges
             :img-top: ../_static/icon_acid.svg
             :link: challenge-acidification
             :link-type: ref
+            :class-card: challenge-card
 
             ^^^
 
@@ -97,5 +97,6 @@ Coding challenges
             :img-top: ../_static/icon_data.svg
             :link: challenge-profile
             :link-type: ref
+            :class-card: challenge-card
 
             ^^^

@@ -26,7 +26,7 @@ Credits
 
         .. raw:: html
 
-            <div>Credits</div>
+            <div class='title'>Credits</div>
 
 .. topic:: Vectors for anniversary items on the landing page
 

@@ -25,7 +25,7 @@ How to participe
 
         .. raw:: html
 
-            <div class="title">How to participate to the coding challenge ?</div>
+            <div class="title">How to participate <br>to coding challenges ?</div>
 
             <small><a href="index.html">Check here for the list of challenges</a></small>
 
@@ -34,7 +34,7 @@ How to participe
 
     The deadline to submit you response to a challenge is **January 31st, midnight (CET)**
 
-    Send a `gist link <https://gist.github.com/>`_ or a zipped notebook to: **argopy (at) proton.me**
+    Send a link toward a published notebook or a zipped notebook to: `argopy@proton.me <mailto:argopy@proton.me?subject=Coding-challenge>`_
 
 .. topic:: What's expected ?
 
@@ -52,4 +52,4 @@ How to participe
     - Script readability
     - Amount of data downloaded (the smaller the better)
 
-    The most *elegant* responses will be added to the `argopy documentation gallery <https://argopy.readthedocs.io/en/latest/gallery.html>`_ and winners will received a special prize.
+    The most *elegant* responses will be added to the `argopy documentation gallery <https://argopy.readthedocs.io/en/latest/gallery.html>`_ and winners will received a **special prize**...

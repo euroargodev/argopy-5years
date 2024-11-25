@@ -71,6 +71,13 @@ body {
     /*float: left; */
     /*margin: 0 0 0 25px;*/
 }
+.activity-card > .sd-card-img-top {
+    height: 250px;
+}
+.sd-card-img-top .challenge-img-top {
+    height: auto;
+    width: 200px;
+}
 .sd-card-img{
     opacity: 0.3;   
 }
@@ -79,7 +86,7 @@ body {
     background-repeat:   no-repeat;
     background-position: center center;
 }
-.sd-card-img-top{
+.challenge-card > .sd-card-img-top{
     height: 250px;
 }
 
@@ -113,9 +120,23 @@ body {
     font-family: GothamMedium;
 }
 
+@media (max-width: 768px)
+ {
+    .grid-item-webtitle div.title{
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+        font-family: GothamMedium;
+    }
+ }
+
+
+
 .grid-item-webtitle img{
     /*max-height: 200px;*/
-    height: 250px;
+    max-height: 250px;
+    /*height: 250px;*/
 }
 .grid-item-webtitle-small{
     font-size: large;
