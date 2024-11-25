@@ -30,6 +30,13 @@ How to participe
             <small><a href="index.html">Check here for the list of challenges</a></small>
 
 
+.. important::
+
+    Challenges are not detailed by design to let you explore as you wish one scientific question addressed by Argo.
+
+    The goal is not to reproduce some research paper, but for you to have fun !
+
+
 .. admonition:: How to participate ?
 
     The deadline to submit you response to a challenge is **January 31st, midnight (CET)**
