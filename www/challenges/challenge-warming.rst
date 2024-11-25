@@ -47,7 +47,7 @@ Ocean warming
 
         :bdg-danger-line:`Challenge`
 
-        Participants should submit a Python code to determine the annual 2000db-bottom average temperature since 2016 in the Irminger Sea.
+        Participants should submit a Python code to determine the annual 2000db-bottom average temperature since 2016 in the Irminger Sea (which can simply be defined using a lat/lon box).
 
 
         +++

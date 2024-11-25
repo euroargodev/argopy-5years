@@ -1,0 +1,172 @@
+.bd-header-announcement a, .bd-header-announcement a:visited, .bd-header-announcement a:link, .bd-header-announcement a:active {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.bd-header-announcement a:hover {
+    color: #D5FF80;
+    text-decoration: none;
+}
+
+body {
+    background-image: url("../_static/background.jpg");
+    background-size: cover;
+}
+.bd-sidebar-primary, .bd-header-article, .bd-main{
+    background-color: rgb(250,250,250,0.5);
+}
+.bd-main, .bd-content{
+    justify-content: center !important;
+}
+.bd-main .bd-content .bd-article-container {
+    min-width: fit-content;
+}
+
+.bd-header-article, .bd-sidebar-secondary {
+    visibility: hidden;
+    display: none;
+}
+.bd-sidebar-primary {
+    visibility: hidden;
+    display: none;
+}
+
+.challenge-card {
+    background-color: rgb(250,250,250,0.2);
+}
+.challenge-card-grid{
+    /*background-image: url("../_static/background2.jpg");*/
+    /*background-size: cover;*/
+    /*background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),*/
+    /*              url("../../media/examples/lizard.png");*/
+}
+.challenge-card-body{
+    color: #FFFFFF
+}
+.challenge-card-title{
+    color: #FFFFFF
+}
+.sd-card-title{
+    font-family: GothamMedium;
+    text-align: center;
+}
+.challenge-card-large .sd-card-title{
+    margin-top: -100px;
+    margin-bottom: 50px;
+    font-size: 28px;
+}
+.challenge-card-footer{
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+}
+.sd-card-img-bottom{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.challenge-img-top{
+    width: 120px !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px !important;
+    /*float: left; */
+    /*margin: 0 0 0 25px;*/
+}
+.activity-card > .sd-card-img-top {
+    height: 250px;
+}
+.sd-card-img-top .challenge-img-top {
+    height: auto;
+    width: 200px;
+}
+.sd-card-img{
+    opacity: 0.3;   
+}
+.sd-card img{
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+.challenge-card > .sd-card-img-top{
+    height: 250px;
+}
+
+@font-face {
+  font-family: GothamUltra;
+  src: url(../_static/fonts/Gotham/Gotham-Ultra.otf);
+}
+
+@font-face {
+  font-family: GothamLight;
+  src: url(../_static/fonts/Gotham/Gotham-Light.otf);
+}
+@font-face {
+  font-family: GothamMedium;
+  src: url(../_static/fonts/Gotham/Gotham-Medium.otf);
+}
+
+.grid-item-webtitle{
+    /*font-size: xxx-large;*/
+    /*font-weight: bold;*/
+    text-align: center;
+    vertical-align: middle;
+    /*font-family: GothamMedium;*/
+}
+
+.grid-item-webtitle div.title{
+    font-size: xxx-large;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    font-family: GothamMedium;
+}
+
+@media (max-width: 768px)
+ {
+    .grid-item-webtitle div.title{
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+        font-family: GothamMedium;
+    }
+ }
+
+
+
+.grid-item-webtitle img{
+    /*max-height: 200px;*/
+    max-height: 250px;
+    /*height: 250px;*/
+}
+.grid-item-webtitle-small{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    font-family: GothamMedium;
+}
+
+.grid-item-row{
+    align-items: center;
+}
+
+section.hide-me > h1 {display: none;}
+
+span.txt-argo{
+    color: rgb(14, 92, 140);
+    font-family: GothamUltra;
+}
+span.txt-py{
+    color: rgb(254, 203, 52);
+    font-family: GothamUltra;
+}
+
+span.argopy-Ultra{
+    font-family: GothamUltra;
+}
+span.argopy-Medium{
+    font-family: GothamMedium;
+}
+span.argopy-Light{
+    font-family: GothamLight;
+}
