@@ -38,15 +38,17 @@
       font-family: 'Press Start 2P';
       font-size: 0.8em;
       text-align: center;
-    }
+    }    
   </style>
 </head>
 <body>
   <!-- <h2>ARGOPY BIRTHDAY ADVENTURE</h2> -->
-  <a  href="https://euroargodev.github.io/argopy-5years"><img src="{{ url_for('static', filename='assets/g3.png')}}" height="130" style="margin-bottom: 10px; margin-top: 0px;"></a>
-  <br>
-  <div id="canvas-container">    
-    <canvas id="game" width="800" height="600"></canvas>
+  <a  href="https://euroargodev.github.io/argopy-5years"><img src="{{ url_for('static', filename='assets/g3.png')}}" height="100" style="margin-bottom: 10px; margin-top: 0px;"></a>
+  <br>    
+    <p style="font-size:medium;">Clear the way from any falling <a href="https://en.wikipedia.org/wiki/Unidentified_submerged_object" target="_blank">USO</a> to help </p>
+    <p style="font-size:medium;">the Argo float to reach the surface.</p>
+  <div id="canvas-container">        
+    <canvas id="game" width="800" height="550"></canvas>
     <audio id="soundtrack" src="{{ url_for('static', filename='assets/soundtrack.mp3')}}" loop></audio>
     <audio id="shoot" src="{{ url_for('static', filename='assets/laser.wav')}}"></audio>
     <audio id="explosion" src="{{ url_for('static', filename='assets/explosion.wav')}}"></audio>
