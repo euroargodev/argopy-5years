@@ -47,7 +47,8 @@ Ocean warming
 
         :bdg-danger-line:`Challenge`
 
-        Participants should submit a Python code to determine the highest valid ocean temperature ever recorded with an Argo float between 3 000 and 4 000 db.
+        Participants should submit a Python code to determine the annual 2000db-bottom average temperature since 2016 in the Irminger Sea (which can simply be defined using a lat/lon box).
+
 
         +++
         .. grid:: 2
