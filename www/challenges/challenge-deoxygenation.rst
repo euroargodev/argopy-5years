@@ -47,7 +47,7 @@ Ocean Deoxygenation
 
         :bdg-danger-line:`Challenge`
 
-        Participants should propose a Python code to determine what is the largest oxygen concentration **anomaly** ever recorded in one of the OMZ (which can simply be defined using a lat/lon box).
+        Participants should propose a Python code to determine what is the largest oxygen concentration **anomaly** ever recorded in the OMZ off Peru (which could be defined using a simple lat/lon box).
 
         +++
         .. grid:: 2
