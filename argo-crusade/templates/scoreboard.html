@@ -58,7 +58,7 @@
       <th>Score</th>
     </tr>    
     <script>
-      $(document).ready(function () {
+      $(document).ready(function () {        
 
         // FETCHING DATA FROM JSON FILE 
         $.getJSON("{{ url_for('static', filename='scores.json')}}",
@@ -67,12 +67,17 @@
             data = data.sort(function(a, b){
               return b.score - a.score;
             });
+            //console.log(data);
+            //Unique
+            var setObj = new Set(data.map(JSON.stringify));
+            var udata = Array.from(setObj).map(JSON.parse);
+            //console.log(udata);
 
             var player = '';
             
             // ITERATING THROUGH OBJECTS 
             var i=0;
-            $.each(data, function (key, value) {
+            $.each(udata, function (key, value) {
 
               //CONSTRUCTION OF ROWS HAVING 
               // DATA FROM JSON OBJECT 
