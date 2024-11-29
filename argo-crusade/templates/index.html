@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Argo Birthday Adventure</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JXMHYNKSV1"></script>
   <script>
@@ -14,35 +10,31 @@
 
     gtag('config', 'G-JXMHYNKSV1');
   </script>
+  <title>Argo Birthday Adventure</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <style>
     body {
       background-color: #7c93b3;
-      background-image: url({{ url_for('static', filename='assets/Pbackground.jpg')
+      background-image: url({{ url_for('static', filename='assets/Pbackground.jpg') }});
+      padding: 1em;
+      font-family: 'Press Start 2P';
+      font-size: 1.2em;
+      text-align: center;
     }
-    });
-    padding: 1em;
-    font-family: 'Press Start 2P';
-    font-size: 1.2em;
-    text-align: center;
-    }
-
     a {
       color: black;
     }
-
     small {
       font-size: 12px;
     }
-
     #canvas-container {
-      width: 100%;
+      width: 100%;      
     }
-
     canvas {
       display: inline;
-      border-radius: 10px;
+      border-radius: 10px;      
     }
-
     .ninput {
       background-color: #ffffff;
       padding: .3em;
@@ -50,37 +42,32 @@
       font-size: 1.0em;
       text-align: center;
     }
-
     .button {
       padding: .3em;
       font-family: 'Press Start 2P';
       font-size: 0.8em;
       text-align: center;
-    }
+    }    
   </style>
 </head>
-
 <body>
   <!-- <h2>ARGOPY BIRTHDAY ADVENTURE</h2> -->
-  <a href="https://euroargodev.github.io/argopy-5years"><img src="{{ url_for('static', filename='assets/g3.png')}}"
-      height="100" style="margin-bottom: 10px; margin-top: 0px;"></a>
-  <br>
-  <p style="font-size:medium;">Clear the way from any falling <a
-      href="https://en.wikipedia.org/wiki/Unidentified_submerged_object" target="_blank">USO</a> to help </p>
-  <p style="font-size:medium;">the Argo float to reach the surface.</p>
-  <div id="canvas-container">
+  <a  href="https://euroargodev.github.io/argopy-5years"><img src="{{ url_for('static', filename='assets/g3.png')}}" height="100" style="margin-bottom: 10px; margin-top: 0px;"></a>
+  <br>    
+    <p style="font-size:medium;">Clear the way from any falling <a href="https://en.wikipedia.org/wiki/Unidentified_submerged_object" target="_blank">USO</a> to help </p>
+    <p style="font-size:medium;">the Argo float to reach the surface.</p>
+  <div id="canvas-container">        
     <canvas id="game" width="800" height="550"></canvas>
     <audio id="soundtrack" src="{{ url_for('static', filename='assets/soundtrack.mp3')}}" loop></audio>
     <audio id="shoot" src="{{ url_for('static', filename='assets/laser.wav')}}"></audio>
     <audio id="explosion" src="{{ url_for('static', filename='assets/explosion.wav')}}"></audio>
     <audio id="achievement" src="{{ url_for('static', filename='assets/achievement.wav')}}"></audio>
   </div>
-  <p>◀️ ▶️ ARROWS 🔫 SPACE 🔈 S</p>
+  <p>◀️ ▶️ ARROWS 🔫 SPACE 🔈 S</p>  
   <hr style="height:-5px; visibility:hidden;" />
-  <input class="ninput" type="text" id="username" name="username" value="Name" required minlength="3" maxlength="12"
-    size="10" />
-  <input class="button" type="button" value="Publish score" onclick="publish_score()" />
-  <input class="button" type="button" value="View scores" onclick="view_scores()" />
+  <input class="ninput" type="text" id="username" name="username" value="Name" required minlength="3" maxlength="12" size="10" />  
+  <input class="button" type="button" value="Publish score" onclick="publish_score()"/>
+  <input class="button" type="button" value="View scores" onclick="view_scores()"/>
   <hr style="height:-5px; visibility:hidden;" />
 
   <a style="font-size:small;">The contest will end on January 31st.</a><br>
@@ -88,314 +75,313 @@
   <br>
   <script>
     const Game = {
-      canvas: null,
-      ctx: null,
-      sound: true,
-      player: null,
-      enemies: [],
-      bullets: [],
-      score: 0,
-      newMaxScore: false,
-      gameOver: false,
-      backgroundImage: new Image(),
-      backgroundY: 0,
-      interval: 0,
-      font: 'Press Start 2P',
-      playerImage: new Image(),
-      enemyImages: [new Image(), new Image(), new Image()]
+  canvas: null,
+  ctx: null,
+  sound: true,
+  player: null,
+  enemies: [],
+  bullets: [],
+  score: 0,
+  newMaxScore: false,
+  gameOver: false,
+  backgroundImage: new Image(),
+  backgroundY: 0,
+  interval: 0,
+  font: 'Press Start 2P',
+  playerImage: new Image(), 
+  enemyImages: [new Image(), new Image(), new Image()]
+}
+
+class Player {
+  constructor() {
+    this.width = 100
+    this.height = 100
+    this.x = Game.canvas.width / 2 - this.width / 2
+    this.y = Game.canvas.height - this.height - 10
+    this.speed = 6
+    this.isMovingLeft = false
+    this.isMovingRight = false
+    this.isShooting = false
+  }
+
+  update() {
+    // Move the player
+    if (this.isMovingLeft) this.x -= this.speed
+    if (this.isMovingRight) this.x += this.speed
+
+    // Ensure the player is inside the canvas
+    if (this.x < 0) this.x = 0
+    if (this.x > Game.canvas.width - this.width) this.x = Game.canvas.width - this.width
+
+    // Shoot bullet
+    if (this.isShooting) {
+      this.isShooting = false
+      Game.bullets.push(new Bullet(this.x + this.width / 2, this.y))
+
+      play('shoot')
+    }
+  }
+
+  render() {
+    Game.ctx.drawImage(Game.playerImage, this.x, this.y, this.width, this.height)
+  }
+}
+
+class Enemy {
+  constructor(speed, size = 50, imgz=Game.enemyImages[0]) {    
+    this.enemyImg = imgz
+    this.width = size
+    this.height = size
+    this.x = Math.random() * (Game.canvas.width - this.width)
+    this.y = 0
+    this.speed = speed        
+  }
+
+  update() {
+    // Move the enemy
+    this.y += this.speed
+
+    // Check if the enemy has reached the end of the canvas
+    if (this.y > Game.canvas.height) {
+      Game.enemies = Game.enemies.filter((enemy) => enemy !== this)
+    }
+  }
+
+  render() {    
+    Game.ctx.drawImage(this.enemyImg, this.x, this.y, this.width, this.height)
+  }
+}
+
+class Bullet {
+  constructor(x, y) {
+    this.width = 5
+    this.height = 10
+    this.x = x - this.width / 2
+    this.y = y - this.height
+    this.speed = 10
+  }
+
+  update() {
+    // Move the bullet
+    this.y -= this.speed
+
+    // Check if the bullet is outside canvas
+    if (this.y < 0) {
+      Game.bullets = Game.bullets.filter((bullet) => bullet !== this)
     }
 
-    class Player {
-      constructor() {
-        this.width = 100
-        this.height = 100
-        this.x = Game.canvas.width / 2 - this.width / 2
-        this.y = Game.canvas.height - this.height - 10
-        this.speed = 6
-        this.isMovingLeft = false
-        this.isMovingRight = false
-        this.isShooting = false
+    // Check if the bullet has hit an enemy
+    Game.enemies.forEach((enemy) => {
+      if (collision(this, enemy)) {
+        Game.enemies = Game.enemies.filter((e) => e !== enemy)
+        Game.bullets = Game.bullets.filter((bullet) => bullet !== this)
+        Game.score += 10
       }
+    })
+  }
 
-      update() {
-        // Move the player
-        if (this.isMovingLeft) this.x -= this.speed
-        if (this.isMovingRight) this.x += this.speed
+  render() {
+    Game.ctx.fillStyle = "white"
+    Game.ctx.fillRect(this.x, this.y, this.width, this.height)    
+  }
+}
 
-        // Ensure the player is inside the canvas
-        if (this.x < 0) this.x = 0
-        if (this.x > Game.canvas.width - this.width) this.x = Game.canvas.width - this.width
+function start() {
+  Game.canvas = document.getElementById("game")
+  Game.ctx = Game.canvas.getContext("2d")
 
-        // Shoot bullet
-        if (this.isShooting) {
-          this.isShooting = false
-          Game.bullets.push(new Bullet(this.x + this.width / 2, this.y))
+  // Load images
+  Game.backgroundImage.src = "{{ url_for('static', filename='assets/background.jpeg')}}"
+  Game.playerImage.src = "{{ url_for('static', filename='assets/ship.png')}}"
+  Game.enemyImages[0].src = "{{ url_for('static', filename='assets/enemy1.png')}}"
+  Game.enemyImages[1].src = "{{ url_for('static', filename='assets/enemy2.png')}}"
+  Game.enemyImages[2].src = "{{ url_for('static', filename='assets/enemy3.png')}}"
 
-          play('shoot')
-        }
-      }
+  // Create player
+  Game.player = new Player()
 
-      render() {
-        Game.ctx.drawImage(Game.playerImage, this.x, this.y, this.width, this.height)
-      }
+  // Each second, spawn new Enemies increasing difficulty
+  setInterval(spawnEnemies, 1000)
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") Game.player.isMovingLeft = true
+    if (event.key === "ArrowRight") Game.player.isMovingRight = true
+    if (event.key === " ") Game.player.isShooting = true
+    if (event.key === "s") Game.sound = !Game.sound
+
+    // Prevent scroll when pressing the spacebar
+    if (event.key === " " && event.target == document.body) event.preventDefault()
+
+    play("soundtrack", 0.25)
+  })
+
+  document.addEventListener("keyup", (event) => {
+    if (event.key === "ArrowLeft") Game.player.isMovingLeft = false
+    if (event.key === "ArrowRight") Game.player.isMovingRight = false
+  })
+
+  gameLoop()
+}
+
+function spawnEnemies() {
+  Game.interval++
+
+  let maxEnemies = randomInt(2, Math.round(Game.interval / 5))
+  let maxSpeed = maxEnemies + 1
+  let maxSize = (maxSpeed + 10) * 10
+
+  if (maxEnemies > 15) maxEnemies = 15
+  if (maxSpeed > 25) maxSpeed = 25
+  if (maxSize > 150) maxSize = 150
+
+  generateEnemies(maxEnemies, { maxSpeed: maxSpeed, maxSize: maxSize })
+}
+
+function generateEnemies(number, attributes) {
+  for (let i = 0; i < number; i++) {
+    const enemy = new Enemy(randomInt(2, attributes['maxSpeed']), randomInt(30, attributes['maxSize']),Game.enemyImages[randomInt(0,3)])
+    Game.enemies.push(enemy)
+  }
+}
+
+function randomInt(min, max) {
+  let difference = max - min
+  let rand = Math.random()
+
+  rand = Math.floor(rand * difference)
+  rand = rand + min
+
+  return rand
+}
+
+function randomColor() {
+  return `#${Math.floor(Math.random()*16777215).toString(16)}`
+}
+
+function play(sound, volume = 0.2) {
+  const audio = document.getElementById(sound)
+
+  audio.volume = Game.sound ? volume : 0
+  if (!audio.loop) audio.currentTime = 0
+
+  audio.play()
+}
+
+function collision(obj1, obj2) {
+  if (
+    obj1.x < obj2.x + obj2.width &&
+    obj1.x + obj1.width > obj2.x &&
+    obj1.y < obj2.y + obj2.height &&
+    obj1.y + obj1.height > obj2.y
+  ) {
+    return true
+  } else {
+    return false
+  }
+}
+
+function update() {
+  Game.player.update()
+  Game.enemies.forEach((enemy) => enemy.update())
+  Game.bullets.forEach((bullet) => bullet.update())
+
+  // Check if the player was hit by any enemy
+  Game.enemies.forEach((enemy) => {
+    if (collision(Game.player, enemy)) {
+      Game.gameOver = true
     }
+  })
+}
 
-    class Enemy {
-      constructor(speed, size = 50, imgz = Game.enemyImages[0]) {
-        this.enemyImg = imgz
-        this.width = size
-        this.height = size
-        this.x = Math.random() * (Game.canvas.width - this.width)
-        this.y = 0
-        this.speed = speed
-      }
+function render() {
+  Game.ctx.clearRect(0, 0, Game.canvas.width, Game.canvas.height)
 
-      update() {
-        // Move the enemy
-        this.y += this.speed
+  renderBackground()
 
-        // Check if the enemy has reached the end of the canvas
-        if (this.y > Game.canvas.height) {
-          Game.enemies = Game.enemies.filter((enemy) => enemy !== this)
-        }
-      }
+  Game.player.render()
+  Game.enemies.forEach((enemy) => enemy.render())
+  Game.bullets.forEach((bullet) => bullet.render())
 
-      render() {
-        Game.ctx.drawImage(this.enemyImg, this.x, this.y, this.width, this.height)
-      }
-    }
+  // Render score
+  const maxScore = localStorage.getItem("gameScore") || 0
+  Game.ctx.fillStyle = "white"
+  Game.ctx.font = `20px '${Game.font}'`
+  Game.ctx.fillText(`Score ${Game.score} Record ${maxScore}`, 10, 30)
 
-    class Bullet {
-      constructor(x, y) {
-        this.width = 5
-        this.height = 10
-        this.x = x - this.width / 2
-        this.y = y - this.height
-        this.speed = 10
-      }
+  // Notify new record achieved
+  if (Game.score > maxScore && !Game.newMaxScore) {
+    play('achievement')
+    Game.newMaxScore = true
+  }
 
-      update() {
-        // Move the bullet
-        this.y -= this.speed
+  // GAME OVER
+  if (Game.gameOver) {
+    play('explosion')
 
-        // Check if the bullet is outside canvas
-        if (this.y < 0) {
-          Game.bullets = Game.bullets.filter((bullet) => bullet !== this)
-        }
+    Game.ctx.fillStyle = "white"
+    Game.ctx.font = `60px '${Game.font}'`
+    Game.ctx.fillText("GAME OVER", 130, 300)
+    Game.ctx.font = `20px '${Game.font}'`
+    Game.ctx.fillText("Press Enter to restart", 220, 340)
 
-        // Check if the bullet has hit an enemy
-        Game.enemies.forEach((enemy) => {
-          if (collision(this, enemy)) {
-            Game.enemies = Game.enemies.filter((e) => e !== enemy)
-            Game.bullets = Game.bullets.filter((bullet) => bullet !== this)
-            Game.score += 10
-          }
-        })
-      }
+    if (Game.score > maxScore) localStorage.setItem("gameScore", Game.score)
 
-      render() {
-        Game.ctx.fillStyle = "white"
-        Game.ctx.fillRect(this.x, this.y, this.width, this.height)
-      }
-    }
+    document.addEventListener("keyup", (event) => {
+      if (event.key === "Enter") location.reload()
+    })
+  }
+}
 
-    function start() {
-      Game.canvas = document.getElementById("game")
-      Game.ctx = Game.canvas.getContext("2d")
+function renderBackground() {
+  Game.ctx.drawImage(Game.backgroundImage, 0, Game.backgroundY)
+  Game.ctx.drawImage(Game.backgroundImage, 0, Game.backgroundY - Game.canvas.height)
 
-      // Load images
-      Game.backgroundImage.src = "{{ url_for('static', filename='assets/background.jpeg')}}"
-      Game.playerImage.src = "{{ url_for('static', filename='assets/ship.png')}}"
-      Game.enemyImages[0].src = "{{ url_for('static', filename='assets/enemy1.png')}}"
-      Game.enemyImages[1].src = "{{ url_for('static', filename='assets/enemy2.png')}}"
-      Game.enemyImages[2].src = "{{ url_for('static', filename='assets/enemy3.png')}}"
+  Game.backgroundY += 0.5
+  if (Game.backgroundY >= Game.canvas.height)
+    Game.backgroundY = 0
+}
 
-      // Create player
-      Game.player = new Player()
+function gameLoop() {
+  update()
+  render()
 
-      // Each second, spawn new Enemies increasing difficulty
-      setInterval(spawnEnemies, 1000)
+  if (!Game.gameOver) requestAnimationFrame(gameLoop)
+}
 
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "ArrowLeft") Game.player.isMovingLeft = true
-        if (event.key === "ArrowRight") Game.player.isMovingRight = true
-        if (event.key === " ") Game.player.isShooting = true
-        if (event.key === "s") Game.sound = !Game.sound
+function view_scores(){
+  window.open('scoreboard',"_blank");
+}
 
-        // Prevent scroll when pressing the spacebar
-        if (event.key === " " && event.target == document.body) event.preventDefault()
+function publish_score() {
+  var username = document.getElementById('username').value;
+  if((username=="Name")||username.length<2){
+    alert("Change your Name so we can congratulate you !!");
+    return;
+  }
+  var score = localStorage.getItem('gameScore');
+  if(score==null){
+    alert("No score to save.");
+    return;
+  }
 
-        play("soundtrack", 0.25)
-      })
+  var requeststr = 'username=' + username + '&score=' + score.toString()  
+  //FLASK REQUEST
+  $.ajax({
+      type: "GET",
+      url: window.location.href + '/savescore',
+      data: requeststr,
+      contentType: 'application/json;charset=UTF-8',      
+      success: function (response) {
+        //document.getElementById('conf_message').innerHTML = response;        
+        window.open('scoreboard',"_blank");
+      },
+      async: false
+    });
 
-      document.addEventListener("keyup", (event) => {
-        if (event.key === "ArrowLeft") Game.player.isMovingLeft = false
-        if (event.key === "ArrowRight") Game.player.isMovingRight = false
-      })
+}
 
-      gameLoop()
-    }
-
-    function spawnEnemies() {
-      Game.interval++
-
-      let maxEnemies = randomInt(2, Math.round(Game.interval / 5))
-      let maxSpeed = maxEnemies + 1
-      let maxSize = (maxSpeed + 10) * 10
-
-      if (maxEnemies > 15) maxEnemies = 15
-      if (maxSpeed > 25) maxSpeed = 25
-      if (maxSize > 150) maxSize = 150
-
-      generateEnemies(maxEnemies, { maxSpeed: maxSpeed, maxSize: maxSize })
-    }
-
-    function generateEnemies(number, attributes) {
-      for (let i = 0; i < number; i++) {
-        const enemy = new Enemy(randomInt(2, attributes['maxSpeed']), randomInt(30, attributes['maxSize']), Game.enemyImages[randomInt(0, 3)])
-        Game.enemies.push(enemy)
-      }
-    }
-
-    function randomInt(min, max) {
-      let difference = max - min
-      let rand = Math.random()
-
-      rand = Math.floor(rand * difference)
-      rand = rand + min
-
-      return rand
-    }
-
-    function randomColor() {
-      return `#${Math.floor(Math.random() * 16777215).toString(16)}`
-    }
-
-    function play(sound, volume = 0.2) {
-      const audio = document.getElementById(sound)
-
-      audio.volume = Game.sound ? volume : 0
-      if (!audio.loop) audio.currentTime = 0
-
-      audio.play()
-    }
-
-    function collision(obj1, obj2) {
-      if (
-        obj1.x < obj2.x + obj2.width &&
-        obj1.x + obj1.width > obj2.x &&
-        obj1.y < obj2.y + obj2.height &&
-        obj1.y + obj1.height > obj2.y
-      ) {
-        return true
-      } else {
-        return false
-      }
-    }
-
-    function update() {
-      Game.player.update()
-      Game.enemies.forEach((enemy) => enemy.update())
-      Game.bullets.forEach((bullet) => bullet.update())
-
-      // Check if the player was hit by any enemy
-      Game.enemies.forEach((enemy) => {
-        if (collision(Game.player, enemy)) {
-          Game.gameOver = true
-        }
-      })
-    }
-
-    function render() {
-      Game.ctx.clearRect(0, 0, Game.canvas.width, Game.canvas.height)
-
-      renderBackground()
-
-      Game.player.render()
-      Game.enemies.forEach((enemy) => enemy.render())
-      Game.bullets.forEach((bullet) => bullet.render())
-
-      // Render score
-      const maxScore = localStorage.getItem("gameScore") || 0
-      Game.ctx.fillStyle = "white"
-      Game.ctx.font = `20px '${Game.font}'`
-      Game.ctx.fillText(`Score ${Game.score} Record ${maxScore}`, 10, 30)
-
-      // Notify new record achieved
-      if (Game.score > maxScore && !Game.newMaxScore) {
-        play('achievement')
-        Game.newMaxScore = true
-      }
-
-      // GAME OVER
-      if (Game.gameOver) {
-        play('explosion')
-
-        Game.ctx.fillStyle = "white"
-        Game.ctx.font = `60px '${Game.font}'`
-        Game.ctx.fillText("GAME OVER", 130, 300)
-        Game.ctx.font = `20px '${Game.font}'`
-        Game.ctx.fillText("Press Enter to restart", 220, 340)
-
-        if (Game.score > maxScore) localStorage.setItem("gameScore", Game.score)
-
-        document.addEventListener("keyup", (event) => {
-          if (event.key === "Enter") location.reload()
-        })
-      }
-    }
-
-    function renderBackground() {
-      Game.ctx.drawImage(Game.backgroundImage, 0, Game.backgroundY)
-      Game.ctx.drawImage(Game.backgroundImage, 0, Game.backgroundY - Game.canvas.height)
-
-      Game.backgroundY += 0.5
-      if (Game.backgroundY >= Game.canvas.height)
-        Game.backgroundY = 0
-    }
-
-    function gameLoop() {
-      update()
-      render()
-
-      if (!Game.gameOver) requestAnimationFrame(gameLoop)
-    }
-
-    function view_scores() {
-      window.open('scoreboard', "_blank");
-    }
-
-    function publish_score() {
-      var username = document.getElementById('username').value;
-      if ((username == "Name") || username.length < 2) {
-        alert("Change your Name so we can congratulate you !!");
-        return;
-      }
-      var score = localStorage.getItem('gameScore');
-      if (score == null) {
-        alert("No score to save.");
-        return;
-      }
-
-      var requeststr = 'username=' + username + '&score=' + score.toString()
-      //FLASK REQUEST
-      $.ajax({
-        type: "GET",
-        url: window.location.href + '/savescore',
-        data: requeststr,
-        contentType: 'application/json;charset=UTF-8',
-        success: function (response) {
-          //document.getElementById('conf_message').innerHTML = response;        
-          window.open('scoreboard', "_blank");
-        },
-        async: false
-      });
-
-    }
-
-    start()
+start()
 
   </script>
 </body>
-
 </html>
