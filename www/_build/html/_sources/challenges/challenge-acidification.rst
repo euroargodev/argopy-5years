@@ -47,7 +47,7 @@ Ocean acidification
 
         :bdg-danger-line:`Challenge`
 
-        Participants should propose a Python code to determine what is the highest pH ever recorded
+        Participants should propose a Python code to determine what is the smallest pH ever recorded
 
         +++
         .. grid:: 2
